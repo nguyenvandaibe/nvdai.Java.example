@@ -12,13 +12,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		ProductFactory factory = new ProductFactory();
-		factory.registerProduct("ID1", new OneProduct());
-		factory.registerProduct("ID2", new TwoProduct());
-		OneProduct p1 = (OneProduct) factory.createProduct("ID1");
-		TwoProduct p2 = (TwoProduct) factory.createProduct("ID2");
+		factory.registerProduct("ID1", new OneProduct(""));
+		factory.registerProduct("ID2", new TwoProduct(""));
+		OneProduct p1 = (OneProduct) factory.createProduct("ID1", "The first product");
+		TwoProduct p2 = (TwoProduct) factory.createProduct("ID2", "The second product");
 		
-		System.out.println(p1.getClass());
-		System.out.println(p2.getClass());
+		System.out.println(p1.getName());
+		System.out.println(p2.getName());
 	}
 
 }

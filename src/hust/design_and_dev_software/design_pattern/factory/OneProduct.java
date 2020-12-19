@@ -6,11 +6,13 @@ public class OneProduct extends Product{
 //		productFactory.registerProduct("ID1", new OneProduct());
 //	}
 	
-	
+	public OneProduct(String productName) {
+		this.name = productName;
+	}
 
 	@Override
-	public OneProduct createProduct() {
-		return new OneProduct();
+	public OneProduct createProduct(String productName) {
+		return new OneProduct(productName);
 	}
 
 }

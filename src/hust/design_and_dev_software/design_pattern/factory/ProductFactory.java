@@ -11,7 +11,7 @@ public class ProductFactory {
 		registerProductMap.put(productId, p);
 	}
 	
-	public Product createProduct(String productId) {
-		return ((Product) registerProductMap.get(productId)).createProduct();
+	public Product createProduct(String productId, String productName) {
+		return ((Product) registerProductMap.get(productId)).createProduct(productName);
 	}
 }
